@@ -16,7 +16,7 @@ A simple React application for converting currency values using real-time exchan
 - React
 - Tailwind CSS
 - JavaScript
-- Currency API (https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06)
+- Currency API (https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${year}-${month}-${day}/v1/currencies/${currency}.json)
 
 ## Demo
 
