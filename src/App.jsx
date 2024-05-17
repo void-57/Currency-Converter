@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Inputbox from "/src/components/Inputbox.jsx";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 import Select from "react-select";
-
+import "./App.css";
 function App() {
   const [amt, setamt] = useState("");
   const [from, setfrom] = useState("usd");
@@ -37,10 +37,7 @@ function App() {
       }}
     >
       <div className="w-full">
-        <div
-          className="fixed inset-x-0 bottom-0 z-50 max-w-md p-5 mx-auto border rounded-lg border-gray-60 backdrop-blur-sm bg-white/30"
-          style={{ marginBottom: "20vh" }}
-        >
+        <div className="w-full max-w-md p-5 mx-auto border rounded-lg border-gray-60 backdrop-blur-sm bg-white/30 form-container">
           <form>
             <div className="w-full mt-1 mb-4">
               <Inputbox
