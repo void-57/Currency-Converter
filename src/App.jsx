@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Inputbox from "/src/components/Inputbox.jsx";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
-import Select from 'react-select';
+import Select from "react-select";
 
 function App() {
   const [amt, setamt] = useState("");
@@ -11,12 +11,11 @@ function App() {
   const currencyInfo = useCurrencyInfo(from);
 
   // const options = Object.keys(currencyInfo || {});
-  const currencyOptions = Object.keys(currencyInfo).map(currency => ({
+  const currencyOptions = Object.keys(currencyInfo).map((currency) => ({
     value: currency,
     label: currency,
   }));
   const swap = () => {
-  
     setamt(convtamt);
     setconvtamt(amt);
     setfrom(to);
@@ -38,9 +37,9 @@ function App() {
       }}
     >
       <div className="w-full">
-        <div className="w-full max-w-md p-5 mx-auto border rounded-lg border-gray-60 backdrop-blur-sm bg-white/30">
+        <div className="w-full max-w-md p-5 mx-auto overflow-auto border rounded-lg border-gray-60 backdrop-blur-sm bg-white/30" style={{ maxHeight: 'calc(100vh - 2rem)' }}>
           <form>
-            <div className="w-full mb-1">
+            <div className="w-full mt-1 mb-4">
               <Inputbox
                 label="From"
                 amount={Number(amt)}
@@ -48,7 +47,6 @@ function App() {
                 currencyOption={currencyOptions}
                 selectCurrency={from}
                 onAmountChange={setamt}
-               
               />
             </div>
             <div className="relative w-full h-0.5">
@@ -57,7 +55,7 @@ function App() {
                 className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-customGreen text-white px-2 py-0.5"
                 onClick={swap}
               >
-               <i class="ri-arrow-up-down-line"></i>
+                <i class="ri-arrow-up-down-line"></i>
               </button>
             </div>
             <div className="w-full mt-1 mb-4">
